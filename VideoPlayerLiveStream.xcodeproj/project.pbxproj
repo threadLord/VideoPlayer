@@ -13,6 +13,9 @@
 		10A1CFAC2435C6ED00179D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFAA2435C6ED00179D29 /* Main.storyboard */; };
 		10A1CFAE2435C6EF00179D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFAD2435C6EF00179D29 /* Assets.xcassets */; };
 		10A1CFB12435C6EF00179D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFAF2435C6EF00179D29 /* LaunchScreen.storyboard */; };
+		10A1CFBB2435CD4500179D29 /* VideosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1CFB92435CD4500179D29 /* VideosCell.swift */; };
+		10A1CFBC2435CD4500179D29 /* VideosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFBA2435CD4500179D29 /* VideosCell.xib */; };
+		10A1CFBF2435D25900179D29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1CFBE2435D25900179D29 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		10A1CFAD2435C6EF00179D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10A1CFB02435C6EF00179D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10A1CFB22435C6EF00179D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10A1CFB92435CD4500179D29 /* VideosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCell.swift; sourceTree = "<group>"; };
+		10A1CFBA2435CD4500179D29 /* VideosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosCell.xib; sourceTree = "<group>"; };
+		10A1CFBE2435D25900179D29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		10A1CFA32435C6ED00179D29 /* VideoPlayerLiveStream */ = {
 			isa = PBXGroup;
 			children = (
+				10A1CFBD2435D24600179D29 /* Repository */,
+				10A1CFB82435C78700179D29 /* Cells */,
 				10A1CFA42435C6ED00179D29 /* AppDelegate.swift */,
 				10A1CFA62435C6ED00179D29 /* SceneDelegate.swift */,
 				10A1CFA82435C6ED00179D29 /* ViewController.swift */,
@@ -65,6 +73,23 @@
 				10A1CFB22435C6EF00179D29 /* Info.plist */,
 			);
 			path = VideoPlayerLiveStream;
+			sourceTree = "<group>";
+		};
+		10A1CFB82435C78700179D29 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				10A1CFB92435CD4500179D29 /* VideosCell.swift */,
+				10A1CFBA2435CD4500179D29 /* VideosCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		10A1CFBD2435D24600179D29 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				10A1CFBE2435D25900179D29 /* Repository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A1CFB12435C6EF00179D29 /* LaunchScreen.storyboard in Resources */,
+				10A1CFBC2435CD4500179D29 /* VideosCell.xib in Resources */,
 				10A1CFAE2435C6EF00179D29 /* Assets.xcassets in Resources */,
 				10A1CFAC2435C6ED00179D29 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A1CFA92435C6ED00179D29 /* ViewController.swift in Sources */,
+				10A1CFBB2435CD4500179D29 /* VideosCell.swift in Sources */,
+				10A1CFBF2435D25900179D29 /* Repository.swift in Sources */,
 				10A1CFA52435C6ED00179D29 /* AppDelegate.swift in Sources */,
 				10A1CFA72435C6ED00179D29 /* SceneDelegate.swift in Sources */,
 			);
