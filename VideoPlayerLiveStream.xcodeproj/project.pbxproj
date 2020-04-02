@@ -16,6 +16,7 @@
 		10A1CFBB2435CD4500179D29 /* VideosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1CFB92435CD4500179D29 /* VideosCell.swift */; };
 		10A1CFBC2435CD4500179D29 /* VideosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFBA2435CD4500179D29 /* VideosCell.xib */; };
 		10A1CFBF2435D25900179D29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1CFBE2435D25900179D29 /* Repository.swift */; };
+		10A1CFC22435DF1D00179D29 /* VideosJSON in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFC12435DF1D00179D29 /* VideosJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		10A1CFB92435CD4500179D29 /* VideosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCell.swift; sourceTree = "<group>"; };
 		10A1CFBA2435CD4500179D29 /* VideosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosCell.xib; sourceTree = "<group>"; };
 		10A1CFBE2435D25900179D29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		10A1CFC12435DF1D00179D29 /* VideosJSON */ = {isa = PBXFileReference; lastKnownFileType = text; path = VideosJSON; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		10A1CFA32435C6ED00179D29 /* VideoPlayerLiveStream */ = {
 			isa = PBXGroup;
 			children = (
+				10A1CFC02435DEA200179D29 /* JSON */,
 				10A1CFBD2435D24600179D29 /* Repository */,
 				10A1CFB82435C78700179D29 /* Cells */,
 				10A1CFA42435C6ED00179D29 /* AppDelegate.swift */,
@@ -90,6 +93,14 @@
 				10A1CFBE2435D25900179D29 /* Repository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		10A1CFC02435DEA200179D29 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				10A1CFC12435DF1D00179D29 /* VideosJSON */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 			files = (
 				10A1CFB12435C6EF00179D29 /* LaunchScreen.storyboard in Resources */,
 				10A1CFBC2435CD4500179D29 /* VideosCell.xib in Resources */,
+				10A1CFC22435DF1D00179D29 /* VideosJSON in Resources */,
 				10A1CFAE2435C6EF00179D29 /* Assets.xcassets in Resources */,
 				10A1CFAC2435C6ED00179D29 /* Main.storyboard in Resources */,
 			);
