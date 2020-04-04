@@ -8,15 +8,17 @@
 
 import Foundation
 
-class MainContainer {
+final class MainContainer {
     
     let networkRepo = NetworkRepository.shared
     
     static let shared = MainContainer()
     
-    func getData(completion: @escaping ([VideoModel]) -> ())  {
-        networkRepo.getVideos { completion($0)}
+    public func getData(completion: @escaping ([VideoModel]) -> ())  {
+        networkRepo.getVideosData { completion($0)}
     }
+    
+    
     
     
 }

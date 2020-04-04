@@ -29,4 +29,25 @@ class VideosCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func applyVideos(_ videos: VideoModel) {
+        upperLabel.text = videos.name
+        lowerLabel.text = durationApply(duration: videos.duration)
+        setImageWith(url: videos.thumbUrl)
+    }
+    
+    private func durationApply(duration: Double) -> String {
+//        let numberFormatter = NumberFormatter()
+//        numberFormatter.numberStyle = .decimal
+//        numberFormatter.minimumFractionDigits = 3
+//        numberFormatter.maximumFractionDigits = 3
+//        let s = numberFormatter.string(from: duration)
+        return String(duration).replacingOccurrences(of: ".", with: ":")
+        
+    }
+    
+    private func setImageWith(url: String) {
+        leftImageView.imageFromUrlAndContentMode(url, aspect: .scaleAspectFit)
+    }
+    
+    
 }
