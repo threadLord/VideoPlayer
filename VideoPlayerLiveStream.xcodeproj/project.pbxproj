@@ -18,6 +18,7 @@
 		10A1CFBF2435D25900179D29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1CFBE2435D25900179D29 /* Repository.swift */; };
 		10A1CFC22435DF1D00179D29 /* VideosJSON in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFC12435DF1D00179D29 /* VideosJSON */; };
 		10E7BA352438D68900834A59 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7BA342438D68900834A59 /* VideoModel.swift */; };
+		10E7BA372439107F00834A59 /* MainContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7BA362439107F00834A59 /* MainContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		10A1CFBE2435D25900179D29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		10A1CFC12435DF1D00179D29 /* VideosJSON */ = {isa = PBXFileReference; lastKnownFileType = text; path = VideosJSON; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		10E7BA342438D68900834A59 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		10E7BA362439107F00834A59 /* MainContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				10A1CFBE2435D25900179D29 /* Repository.swift */,
+				10E7BA362439107F00834A59 /* MainContainer.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				10A1CFA92435C6ED00179D29 /* ViewController.swift in Sources */,
 				10E7BA352438D68900834A59 /* VideoModel.swift in Sources */,
+				10E7BA372439107F00834A59 /* MainContainer.swift in Sources */,
 				10A1CFBB2435CD4500179D29 /* VideosCell.swift in Sources */,
 				10A1CFBF2435D25900179D29 /* Repository.swift in Sources */,
 				10A1CFA52435C6ED00179D29 /* AppDelegate.swift in Sources */,
