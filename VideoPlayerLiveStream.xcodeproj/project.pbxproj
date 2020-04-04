@@ -17,6 +17,7 @@
 		10A1CFBC2435CD4500179D29 /* VideosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFBA2435CD4500179D29 /* VideosCell.xib */; };
 		10A1CFBF2435D25900179D29 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1CFBE2435D25900179D29 /* Repository.swift */; };
 		10A1CFC22435DF1D00179D29 /* VideosJSON in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFC12435DF1D00179D29 /* VideosJSON */; };
+		10E7BA352438D68900834A59 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7BA342438D68900834A59 /* VideoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		10A1CFBA2435CD4500179D29 /* VideosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosCell.xib; sourceTree = "<group>"; };
 		10A1CFBE2435D25900179D29 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		10A1CFC12435DF1D00179D29 /* VideosJSON */ = {isa = PBXFileReference; lastKnownFileType = text; path = VideosJSON; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		10E7BA342438D68900834A59 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		10A1CFA32435C6ED00179D29 /* VideoPlayerLiveStream */ = {
 			isa = PBXGroup;
 			children = (
+				10E7BA332438D66300834A59 /* Model */,
 				10A1CFC02435DEA200179D29 /* JSON */,
 				10A1CFBD2435D24600179D29 /* Repository */,
 				10A1CFB82435C78700179D29 /* Cells */,
@@ -101,6 +104,14 @@
 				10A1CFC12435DF1D00179D29 /* VideosJSON */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		10E7BA332438D66300834A59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10E7BA342438D68900834A59 /* VideoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A1CFA92435C6ED00179D29 /* ViewController.swift in Sources */,
+				10E7BA352438D68900834A59 /* VideoModel.swift in Sources */,
 				10A1CFBB2435CD4500179D29 /* VideosCell.swift in Sources */,
 				10A1CFBF2435D25900179D29 /* Repository.swift in Sources */,
 				10A1CFA52435C6ED00179D29 /* AppDelegate.swift in Sources */,

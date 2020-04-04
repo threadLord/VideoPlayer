@@ -1,41 +1,34 @@
-{
-   [
-   {
-       "name" : "first Video",
-       "url" : "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_bse7sb83/format/applehttp/protocol/http/a.m3u8",
-       "thumbUrl" : "",
-       "duration" : "1:04"
-    },
-   {
-       "name" : "second Video",
-       "url" : "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_xmrhw3lb/format/applehttp/protocol/http/a.m3u8",
-       "thumbUrl" : "",
-       "duration" : "1:03"
-    },
-   {
-       "name" : "thirdVideo",
-       "url" : "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_hcmo3xj4/format/applehttp/protocol/http/a.m3u8",
-       "thumbUrl" : "",
-       "duration" : "1:02"
-    },
-   
-   {
-       "name" : "FourthVideo",
-       "url" : "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_f7g7buxm/format/applehttp/protocol/http/a.m3u8",
-       "thumbUrl" : "",
-       "duration" : "1:01"
-    },
-   {
-       "name" : "FifthVideo",
-       "url" : "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_ku0s0cqw/format/applehttp/protocol/http/a.m3u8",
-       "thumbUrl" : "",
-       "duration" : ""
-    },
-   {
-      "name" : "SixthVideo",
-      "url" : "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_1uga2std/format/applehttp/protocol/http/a.m3u8",
-      "thumbUrl" : "",
-      "duration" : ""
-   }
-   ]
+[{
+    "name": "first Video",
+    "url": "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_bse7sb83/format/applehttp/protocol/http/a.m3u8",
+    "thumbUrl": "https://www.worldatlas.com/r/w728-h425-c728x425/upload/a1/8a/d5/untitled-design-332.jpg",
+    "duration": 1.04
+}, {
+    "name": "second Video",
+    "url": "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_xmrhw3lb/format/applehttp/protocol/http/a.m3u8",
+    "thumbUrl": "https://www.worldatlas.com/r/w728-h425-c728x425/upload/a1/8a/d5/untitled-design-332.jpg",
+    "duration": 1.03
+}, {
+    "name": "thirdVideo",
+    "url": "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_hcmo3xj4/format/applehttp/protocol/http/a.m3u8",
+    "thumbUrl": "https://www.worldatlas.com/r/w728-h425-c728x425/upload/a1/8a/d5/untitled-design-332.jpg",
+    "duration": 1.02
+}, {
+    "name": "FourthVideo",
+    "url": "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_f7g7buxm/format/applehttp/protocol/http/a.m3u8",
+    "thumbUrl": "https://www.worldatlas.com/r/w728-h425-c728x425/upload/a1/8a/d5/untitled-design-332.jpg",
+    "duration": 1.01
+}, {
+    "name": "FifthVideo",
+    "url": "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_ku0s0cqw/format/applehttp/protocol/http/a.m3u8",
+    "thumbUrl": "https://www.worldatlas.com/r/w728-h425-c728x425/upload/a1/8a/d5/untitled-design-332.jpg",
+    "duration": 1.00
+}, {
+    "name": "SixthVideo",
+    "url": "http://open.http.staging-k9.streamuk.com/p/3000021/sp/300002100/playManifest/entryId/0_1uga2std/format/applehttp/protocol/http/a.m3u8",
+
+    "thumbUrl": "https://www.worldatlas.com/r/w728-h425-c728x425/upload/a1/8a/d5/untitled-design-332.jpg",
+    "duration": 0.57
 }
+]
+
