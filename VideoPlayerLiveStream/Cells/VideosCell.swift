@@ -43,7 +43,6 @@ class VideosCell: UITableViewCell {
     
     private func durationApply(duration: Double) -> String {
         return String(duration).replacingOccurrences(of: ".", with: ":")
-        
     }
     
     private func setImageWith(url: String) {

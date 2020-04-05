@@ -33,11 +33,33 @@ extension VideoProtocol {
     }
 }
 
-struct Video : VideoProtocol {
+class Video : VideoProtocol {
     var name : String
     var url : String
     var thumbImage : UIImage?
     var duration : Double
-    var assetURL : AVURLAsset? = nil
+    var assetURL : AVURLAsset?
+    
+    init(name: String, url: String, thumbImage: UIImage? = nil, duration: Double, assetUrl: AVURLAsset? = nil) {
+        self.name = name
+        self.url = url
+        self.thumbImage = thumbImage
+        self.duration = duration
+        self.assetURL = assetUrl == nil ? getAsset() : assetUrl
+    }
+    
+    func prepareAsset() {
+        guard let urlForAsset = URL(string: url) else { return }
+        assetURL = AVURLAsset(url: urlForAsset)
+    }
+    
+    func getAsset() -> AVURLAsset? {
+        guard let asset = assetURL else {
+            guard let urlForAsset = URL(string: url) else { return nil}
+              assetURL = AVURLAsset(url: urlForAsset)
+            return assetURL
+            }
+        return asset
+    }
 }
 
