@@ -12,7 +12,7 @@ class VideosListViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var VideosTableView: UITableView!
 
-    weak var mainCoordinator : MainCoordinator?
+    var mainCoordinator : MainCoordinator?
     
     var viewModel = VideosListViewModel()
     
@@ -51,6 +51,15 @@ extension VideosListViewController : UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected: \(indexPath.row)")
+        let dataToTransport = viewModel.videosList[indexPath.row]
+        
+        if mainCoordinator != nil {
+            print("Main Exists")
+        }
+        mainCoordinator!.videoController(dataForVideo: dataToTransport)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

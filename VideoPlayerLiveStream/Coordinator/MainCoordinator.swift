@@ -23,9 +23,10 @@ class MainCoordinator : Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func videoController() {
+    func videoController(dataForVideo: Video) {
         let vc = VideoViewController.instantiate()
         vc.mainCoordinator = self
+        vc.dataForVideo = dataForVideo
         navigationController.pushViewController(vc, animated: true)
     }
     
