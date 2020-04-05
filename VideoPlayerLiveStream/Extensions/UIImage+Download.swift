@@ -54,24 +54,6 @@ extension String {
             }
         }
     }
-    
-    
-//    func imageFromUrl(completion: @escaping (UIImage) -> (UIImage)){
-//        guard let url = URL(string: self) else {
-//            completion(UIImage(named: "default.png")!);
-//            return
-//        }
-//        
-//        
-//        DispatchQueue.global(qos: .userInitiated).async {
-//            if let data = try? Data(contentsOf: url) {
-//                DispatchQueue.main.async {
-//                    
-//                    completion(UIImage(data: data) ?? UIImage(named: "default.png")!)
-//                }
-//            }
-//        }
-//    }
 }
 
 class Util {
