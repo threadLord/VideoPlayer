@@ -35,6 +35,10 @@ class VideosCell: UITableViewCell {
         setImageWith(url: videos.thumbUrl)
     }
     
+    func applyList(_ videos: Video) {
+        
+    }
+    
     private func durationApply(duration: Double) -> String {
 //        let numberFormatter = NumberFormatter()
 //        numberFormatter.numberStyle = .decimal

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 final class MainContainer {
     
     let networkRepo = NetworkRepository.shared
@@ -18,7 +18,22 @@ final class MainContainer {
         networkRepo.getVideosData { completion($0)}
     }
     
-    
+    public func getVideos(completion: @escaping ([Video]) -> ()) {
+        networkRepo.getVideosData { videoWithoutImage in
+            let videos = videoWithoutImage.map { videoMod -> Video in
+                
+                let imageForVideo : UIImage? = {
+                    var localImage : UIImage?
+                    videoMod.thumbUrl.imageFromUrl { image in
+                        localImage = image
+                    }
+                    return localImage
+                }()
+                return Video(name: videoMod.name, url: videoMod.url, thumbUrl: imageForVideo, duration: videoMod.duration)
+            }
+            completion(videos)
+        }
+    }
     
     
 }
