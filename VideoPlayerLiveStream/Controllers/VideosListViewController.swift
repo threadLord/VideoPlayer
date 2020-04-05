@@ -16,30 +16,15 @@ class VideosListViewController: UIViewController {
     
     var viewModel : VideosListViewModel?
     
-//    var data : [VideoModel] = [] {
-//        didSet {
-//            VideosTableView.reloadData()
-//        }
-//    }
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.VideosTableView.delegate = self
+        self.VideosTableView.dataSource = self
         VideosTableView.register(UINib(nibName: "VideosCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
         guard let VideosTableView = VideosTableView else { return }
-        print("Initialized")
         viewModel = VideosListViewModel(tableView: VideosTableView)
         
-//        mainContainer.getData { [weak self] in
-//            guard let self = self else { return }
-//            self.data = $0
-//            
-////
-//        }
-       self.VideosTableView.delegate = self
-       self.VideosTableView.dataSource = self
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,10 +48,6 @@ extension VideosListViewController : UITableViewDelegate, UITableViewDataSource 
         let cell = VideosTableView.dequeueReusableCell(withIdentifier: "VideosCell") as! VideosCell
         
         guard let dataForCell = viewModel?.videosList[indexPath.row] else { return cell}
-//        let dataForCell = data[indexPath.row]
-        
-        print("Cells")
-//        cell.applyVideos(dataForCell)
         cell.applyList(dataForCell)
         
         
@@ -74,9 +55,9 @@ extension VideosListViewController : UITableViewDelegate, UITableViewDataSource 
     }
     
     
-    
-    
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
 
 

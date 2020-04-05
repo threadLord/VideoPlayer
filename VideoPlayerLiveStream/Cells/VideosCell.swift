@@ -20,13 +20,13 @@ class VideosCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        leftImageView.contentMode = .scaleAspectFit
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func applyVideos(_ videos: VideoModel) {
@@ -42,11 +42,6 @@ class VideosCell: UITableViewCell {
     }
     
     private func durationApply(duration: Double) -> String {
-//        let numberFormatter = NumberFormatter()
-//        numberFormatter.numberStyle = .decimal
-//        numberFormatter.minimumFractionDigits = 3
-//        numberFormatter.maximumFractionDigits = 3
-//        let s = numberFormatter.string(from: duration)
         return String(duration).replacingOccurrences(of: ".", with: ":")
         
     }
@@ -54,6 +49,4 @@ class VideosCell: UITableViewCell {
     private func setImageWith(url: String) {
         leftImageView.imageFromUrlAndContentMode(url, aspect: .scaleAspectFit)
     }
-    
-    
 }

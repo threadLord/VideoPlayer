@@ -28,36 +28,19 @@ class VideosListViewModel {
     }
     
     
-//    func getImages() {
-//        mainContainer.getData { [weak self] in
-//            guard let self = self else { return }
-//            self.videosList = $0
-////            self._updateFlag = !self._updateFlag
-//            $0.forEach { [ weak self] in
-//                guard let self = self else { return }
-//
-////                print("LALALA: \($0.name)")
-//                self.videosList.append($0)
-//                self._updateFlag = !self._updateFlag
-////                print("FLAG: \(self._updateFlag)")
-//            }
-//
-//        }
-//    }
-    
     func getImgs() {
         mainContainer.getVideos{ [weak self] in
                 guard let self = self else { return }
                 self.videosList = $0
-    //            self._updateFlag = !self._updateFlag
-                $0.forEach { [ weak self] in
-                    guard let self = self else { return }
-                    
-    //                print("LALALA: \($0.name)")
-                    self.videosList.append($0)
+//    //            self._updateFlag = !self._updateFlag
+//                $0.forEach { [ weak self] in
+//                    guard let self = self else { return }
+//
+//    //                print("LALALA: \($0.name)")
+//                    self.videosList.append($0)
                     self._updateFlag = !self._updateFlag
-    //                print("FLAG: \(self._updateFlag)")
-                }
+//    //                print("FLAG: \(self._updateFlag)")
+//                }
                 
             }
         }

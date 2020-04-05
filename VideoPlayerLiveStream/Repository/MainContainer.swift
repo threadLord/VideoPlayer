@@ -21,15 +21,7 @@ final class MainContainer {
     public func getVideos(completion: @escaping ([Video]) -> ()) {
         networkRepo.getVideosData { videoWithoutImage in
             let videos = videoWithoutImage.map { videoMod -> Video in
-                
-                let imageForVideo : UIImage? = {
-                    var localImage : UIImage?
-                    videoMod.thumbUrl.imageFromUrl { image in
-                        localImage = image
-                    }
-                    return localImage
-                }()
-                return Video(name: videoMod.name, url: videoMod.url, thumbImage: imageForVideo, duration: videoMod.duration)
+                return Video(name: videoMod.name, url: videoMod.url, thumbImage: Util.imageFrom(url: videoMod.thumbUrl), duration: videoMod.duration)
             }
             completion(videos)
         }
