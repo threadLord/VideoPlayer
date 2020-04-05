@@ -52,12 +52,7 @@ extension VideosListViewController : UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected: \(indexPath.row)")
         let dataToTransport = viewModel.videosList[indexPath.row]
-        
-        if mainCoordinator != nil {
-            print("Main Exists")
-        }
         mainCoordinator!.videoController(dataForVideo: dataToTransport)
     }
     
@@ -65,9 +60,6 @@ extension VideosListViewController : UITableViewDelegate, UITableViewDataSource 
         return 100
     }
 }
-
-
-
 extension VideosListViewController : VideosListViewModelDelegate {
     func dataUpdated() {
         VideosTableView.reloadData()

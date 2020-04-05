@@ -10,6 +10,7 @@
 		102848D72439F44F002518B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102848D62439F44F002518B2 /* Coordinator.swift */; };
 		102848D92439F482002518B2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102848D82439F482002518B2 /* MainCoordinator.swift */; };
 		102848DC2439F49B002518B2 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102848DB2439F49B002518B2 /* Storyboarded.swift */; };
+		103228B2243A32150004C9E3 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103228B1243A32150004C9E3 /* UIViewController+Child.swift */; };
 		10A1CFA52435C6ED00179D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1CFA42435C6ED00179D29 /* AppDelegate.swift */; };
 		10A1CFA72435C6ED00179D29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1CFA62435C6ED00179D29 /* SceneDelegate.swift */; };
 		10A1CFAC2435C6ED00179D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A1CFAA2435C6ED00179D29 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		102848D62439F44F002518B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		102848D82439F482002518B2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		102848DB2439F49B002518B2 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		103228B1243A32150004C9E3 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		10A1CFA12435C6ED00179D29 /* VideoPlayerLiveStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerLiveStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A1CFA42435C6ED00179D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A1CFA62435C6ED00179D29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				10E7BA4524391E7500834A59 /* UIImage+Download.swift */,
+				103228B1243A32150004C9E3 /* UIViewController+Child.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				10E7BA372439107F00834A59 /* MainContainer.swift in Sources */,
 				10E7BA3E243912CB00834A59 /* VideoViewController.swift in Sources */,
 				10A1CFBB2435CD4500179D29 /* VideosCell.swift in Sources */,
+				103228B2243A32150004C9E3 /* UIViewController+Child.swift in Sources */,
 				10E7BA4624391E7500834A59 /* UIImage+Download.swift in Sources */,
 				10A1CFBF2435D25900179D29 /* Repository.swift in Sources */,
 				10A1CFA52435C6ED00179D29 /* AppDelegate.swift in Sources */,

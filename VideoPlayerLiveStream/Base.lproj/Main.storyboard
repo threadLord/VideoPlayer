@@ -21,7 +21,7 @@
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pz3-lS-zwX" secondAttribute="trailing" id="1zJ-mG-7g6"/>
                             <constraint firstItem="Pz3-lS-zwX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dv5-Bw-ymz"/>
@@ -45,19 +45,7 @@
                     <view key="view" contentMode="scaleToFill" id="9zM-Fn-NsX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButt" translatesAutoresizingMaskIntoConstraints="NO" id="EmL-CK-c45">
-                                <rect key="frame" x="103.5" y="367.5" width="207" height="161"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="EmL-CK-c45" firstAttribute="centerX" secondItem="9zM-Fn-NsX" secondAttribute="centerX" id="4cx-yo-kP1"/>
-                            <constraint firstItem="EmL-CK-c45" firstAttribute="centerY" secondItem="9zM-Fn-NsX" secondAttribute="centerY" id="b8G-Mg-l1F"/>
-                            <constraint firstItem="EmL-CK-c45" firstAttribute="width" secondItem="9zM-Fn-NsX" secondAttribute="width" multiplier="0.5" id="mXP-HP-Lfa"/>
-                            <constraint firstItem="EmL-CK-c45" firstAttribute="height" secondItem="9zM-Fn-NsX" secondAttribute="height" multiplier="0.18" id="vUX-4l-0Tp"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BMJ-yB-PpW"/>
                     </view>
                 </viewController>
@@ -74,7 +62,4 @@
             <point key="canvasLocation" x="1704" y="94"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="playButt" width="512" height="439"/>
-    </resources>
 </document>
