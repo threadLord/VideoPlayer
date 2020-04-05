@@ -8,12 +8,12 @@
 
 import UIKit
 
-class VideosListViewController: UIViewController {
+class VideosListViewController: UIViewController, Storyboarded {
 
-    
     @IBOutlet weak var VideosTableView: UITableView!
-    var mainContainer = MainContainer.shared
 
+    weak var mainCoordinator : MainCoordinator?
+    
     var viewModel = VideosListViewModel()
     
     override func viewDidLoad() {

@@ -8,8 +8,13 @@
 
 import UIKit
 
-class VideoViewController: UIViewController {
+class VideoViewController: UIViewController , Storyboarded {
 
+    
+    
+    
+    weak var mainCoordinator : MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
