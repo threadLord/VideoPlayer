@@ -26,6 +26,4 @@ final class MainContainer {
             completion(videos)
         }
     }
-    
-    
 }

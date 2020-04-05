@@ -9,46 +9,28 @@
 import UIKit
 
 
+protocol VideosListViewModelDelegate : class {
+    func dataUpdated()
+}
+
 class VideosListViewModel {
     
+    weak var delegate : VideosListViewModelDelegate?
     var mainContainer = MainContainer.shared
     
-    var videosList : [Video] = []
-    var _updateFlag = false {
+    var videosList : [Video] = [] {
         didSet {
-            updateTableView()
+            delegate?.dataUpdated()
         }
     }
-    var _tableView : UITableView
-    
-    init(tableView: UITableView) {
-        self._tableView = tableView
-//        getImages()
+    init() {
         getImgs()
     }
-    
     
     func getImgs() {
         mainContainer.getVideos{ [weak self] in
                 guard let self = self else { return }
                 self.videosList = $0
-//    //            self._updateFlag = !self._updateFlag
-//                $0.forEach { [ weak self] in
-//                    guard let self = self else { return }
-//
-//    //                print("LALALA: \($0.name)")
-//                    self.videosList.append($0)
-                    self._updateFlag = !self._updateFlag
-//    //                print("FLAG: \(self._updateFlag)")
-//                }
-                
             }
         }
-    
-    
-    
-    func updateTableView() {
-        _tableView.reloadData()
-    }
-    
 }

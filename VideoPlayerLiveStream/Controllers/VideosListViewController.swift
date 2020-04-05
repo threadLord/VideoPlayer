@@ -13,17 +13,16 @@ class VideosListViewController: UIViewController {
     
     @IBOutlet weak var VideosTableView: UITableView!
     var mainContainer = MainContainer.shared
-    
-    var viewModel : VideosListViewModel?
+
+    var viewModel = VideosListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.VideosTableView.delegate = self
         self.VideosTableView.dataSource = self
-        VideosTableView.register(UINib(nibName: "VideosCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
-        guard let VideosTableView = VideosTableView else { return }
-        viewModel = VideosListViewModel(tableView: VideosTableView)
         
+        VideosTableView.register(UINib(nibName: "VideosCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
+        viewModel.delegate = self
        
     }
     
@@ -34,23 +33,21 @@ class VideosListViewController: UIViewController {
     
     
     deinit {
+        viewModel.delegate = nil
         print("List VC Deinitialized")
     }
 }
 
 extension VideosListViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.videosList.count ?? 0
-//        return data.count
+        return viewModel.videosList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = VideosTableView.dequeueReusableCell(withIdentifier: "VideosCell") as! VideosCell
         
-        guard let dataForCell = viewModel?.videosList[indexPath.row] else { return cell}
+        let dataForCell = viewModel.videosList[indexPath.row]
         cell.applyList(dataForCell)
-        
-        
         return cell
     }
     
@@ -62,3 +59,8 @@ extension VideosListViewController : UITableViewDelegate, UITableViewDataSource 
 
 
 
+extension VideosListViewController : VideosListViewModelDelegate {
+    func dataUpdated() {
+        VideosTableView.reloadData()
+    }
+}
