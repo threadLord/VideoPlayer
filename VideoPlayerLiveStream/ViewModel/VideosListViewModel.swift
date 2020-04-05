@@ -13,7 +13,7 @@ class VideosListViewModel {
     
     var mainContainer = MainContainer.shared
     
-    var videosList : [VideoModel] = [VideoModel(name: "11", url: "11", thumbUrl: "111", duration: 1.00)]
+    var videosList : [Video] = []
     var _updateFlag = false {
         didSet {
             updateTableView()
@@ -23,26 +23,46 @@ class VideosListViewModel {
     
     init(tableView: UITableView) {
         self._tableView = tableView
-        getImages()
+//        getImages()
+        getImgs()
     }
     
     
-    func getImages() {
-        mainContainer.getData { [weak self] in
-            guard let self = self else { return }
-            self.videosList = $0
-//            self._updateFlag = !self._updateFlag
-            $0.forEach { [ weak self] in
+//    func getImages() {
+//        mainContainer.getData { [weak self] in
+//            guard let self = self else { return }
+//            self.videosList = $0
+////            self._updateFlag = !self._updateFlag
+//            $0.forEach { [ weak self] in
+//                guard let self = self else { return }
+//
+////                print("LALALA: \($0.name)")
+//                self.videosList.append($0)
+//                self._updateFlag = !self._updateFlag
+////                print("FLAG: \(self._updateFlag)")
+//            }
+//
+//        }
+//    }
+    
+    func getImgs() {
+        mainContainer.getVideos{ [weak self] in
                 guard let self = self else { return }
+                self.videosList = $0
+    //            self._updateFlag = !self._updateFlag
+                $0.forEach { [ weak self] in
+                    guard let self = self else { return }
+                    
+    //                print("LALALA: \($0.name)")
+                    self.videosList.append($0)
+                    self._updateFlag = !self._updateFlag
+    //                print("FLAG: \(self._updateFlag)")
+                }
                 
-//                print("LALALA: \($0.name)")
-                self.videosList.append($0)
-                self._updateFlag = !self._updateFlag
-//                print("FLAG: \(self._updateFlag)")
             }
-            
         }
-    }
+    
+    
     
     func updateTableView() {
         _tableView.reloadData()

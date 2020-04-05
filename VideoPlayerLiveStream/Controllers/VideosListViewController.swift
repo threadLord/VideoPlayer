@@ -66,7 +66,9 @@ extension VideosListViewController : UITableViewDelegate, UITableViewDataSource 
 //        let dataForCell = data[indexPath.row]
         
         print("Cells")
-        cell.applyVideos(dataForCell)
+//        cell.applyVideos(dataForCell)
+        cell.applyList(dataForCell)
+        
         
         return cell
     }

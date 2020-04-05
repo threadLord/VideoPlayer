@@ -29,7 +29,7 @@ final class MainContainer {
                     }
                     return localImage
                 }()
-                return Video(name: videoMod.name, url: videoMod.url, thumbUrl: imageForVideo, duration: videoMod.duration)
+                return Video(name: videoMod.name, url: videoMod.url, thumbImage: imageForVideo, duration: videoMod.duration)
             }
             completion(videos)
         }

@@ -36,7 +36,9 @@ class VideosCell: UITableViewCell {
     }
     
     func applyList(_ videos: Video) {
-        
+        upperLabel.text = videos.name
+        lowerLabel.text = durationApply(duration: videos.duration)
+        leftImageView.image = videos.thumbImage
     }
     
     private func durationApply(duration: Double) -> String {

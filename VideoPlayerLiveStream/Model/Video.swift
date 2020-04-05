@@ -12,7 +12,7 @@ import UIKit
 struct Video {
     var name : String
     var url : String
-    var thumbUrl : UIImage?
+    var thumbImage : UIImage?
     var duration : Double
 }
 
