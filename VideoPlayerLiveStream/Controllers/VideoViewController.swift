@@ -38,15 +38,32 @@ class VideoViewController: UIViewController, Storyboarded {
         
     }
     
-   override func viewWillAppear(_ animated: Bool) {
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            playerViewController?.goFullScreen()
+        } else {
+            print("Portrait")
+            
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
-       navigationController?.setNavigationBarHidden(true, animated: false)
+//       navigationController?.setNavigationBarHidden(true, animated: false)
+        let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20.0
+        let navigationHeight = navigationController?.navigationBar.frame.height ?? 0.0
+        playerViewController?.view.frame.origin.y = statusBarHeight + navigationHeight
+        navigationController?.navigationBar.backgroundColor = UIColor.black
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
        setupUI()
    }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
+//        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     @IBAction func backButton(_ sender: UIButton) {
@@ -78,6 +95,7 @@ extension VideoViewController {
         TitleLabel.text = dataForVideo?.name
         DesctiptionLabel.text = description
         durationLabel.text = "Duration : \(durationString)"
+        navigationItem.title = dataForVideo?.name
     }
         
     private func durationApply(duration: Double) -> String {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 @nonobjc extension UIViewController {
     func add(_ child: UIViewController, frame: CGRect? = nil) {
@@ -24,5 +25,16 @@ import UIKit
         willMove(toParent: nil)
         view.removeFromSuperview()
         removeFromParent()
+    }
+}
+
+extension AVPlayerViewController {
+
+    func goFullScreen() {
+        let selector = NSSelectorFromString("_transitionToFullScreenViewControllerAnimated:completionHandler:")
+        if self.responds(to: selector) {
+            // first argument is animated (true for me), second is completion handler (nil in my case)
+            self.perform(selector, with: true, with: nil)
+        }
     }
 }
