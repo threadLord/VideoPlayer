@@ -37,18 +37,10 @@ class VideoViewController: UIViewController, Storyboarded {
         AssetPlaybackManager.sharedManager.setAssetForPlayback(dataForVideo)
         
     }
-    
-
-    
+ 
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        navigationController?.setNavigationBarHidden(true, animated: false)
-//        let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20.0
-//        let navigationHeight = navigationController?.navigationBar.frame.height ?? 60.0
-//        playerViewController?.view.frame.origin.y = self.topbarHeight
-//        navigationController?.navigationBar.backgroundColor = UIColor.black
-//        navigationController?.navigationBar.tintColor = UIColor.white
-        
        setupUI()
    }
 
