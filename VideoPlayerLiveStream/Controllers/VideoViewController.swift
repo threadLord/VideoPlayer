@@ -30,7 +30,8 @@ class VideoViewController: UIViewController, Storyboarded {
                                              y: self.view.frame.origin.y,
                                              width: self.view.frame.width,
                                              height: self.view.frame.width * 9/16)
-        add(playerViewController!)
+        guard let playerViewController = playerViewController else {return}
+        add(playerViewController)
         
         AssetPlaybackManager.sharedManager.delegate = self
         AssetPlaybackManager.sharedManager.setAssetForPlayback(dataForVideo)
