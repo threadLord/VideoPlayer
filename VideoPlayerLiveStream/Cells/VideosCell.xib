@@ -42,6 +42,13 @@
                             <constraint firstAttribute="width" constant="22" id="ceY-KO-SGq"/>
                         </constraints>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RIm-vn-ghV">
+                        <rect key="frame" x="54.5" y="35" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="5xx-Ve-eqH"/>
+                            <constraint firstAttribute="width" constant="30" id="Jv4-8h-MlU"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -55,8 +62,10 @@
                     <constraint firstItem="C0F-RP-Wvr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Kpa-yv-I89"/>
                     <constraint firstItem="poE-hp-fg3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UeU-xE-Jjn"/>
                     <constraint firstItem="GRx-4X-CMJ" firstAttribute="bottom" secondItem="poE-hp-fg3" secondAttribute="bottom" id="anU-yz-c2s"/>
+                    <constraint firstItem="RIm-vn-ghV" firstAttribute="centerX" secondItem="C0F-RP-Wvr" secondAttribute="centerX" id="bHa-gs-bOd"/>
                     <constraint firstItem="poE-hp-fg3" firstAttribute="height" secondItem="C0F-RP-Wvr" secondAttribute="height" multiplier="0.6125" id="dtD-kd-aZV"/>
                     <constraint firstItem="GRx-4X-CMJ" firstAttribute="height" secondItem="poE-hp-fg3" secondAttribute="height" id="eMU-j6-Y18"/>
+                    <constraint firstItem="RIm-vn-ghV" firstAttribute="centerY" secondItem="C0F-RP-Wvr" secondAttribute="centerY" id="g5d-mW-n9A"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
