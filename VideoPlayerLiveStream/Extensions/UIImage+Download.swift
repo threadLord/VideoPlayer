@@ -41,7 +41,6 @@ extension String {
             return
         }
         
-        
         DispatchQueue.global(qos: .userInitiated).async {
             if let data = try? Data(contentsOf: url) {
                 DispatchQueue.main.async {
@@ -70,6 +69,5 @@ class Util {
             }
         }
         return nil
-
     }
 }

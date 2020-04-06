@@ -36,5 +36,4 @@ class MainCoordinator : Coordinator {
             navigationController.popViewController(animated: true)
         }
     }
-    
 }
