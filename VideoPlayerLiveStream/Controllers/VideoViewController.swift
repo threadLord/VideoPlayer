@@ -47,8 +47,16 @@ class VideoViewController: UIViewController, Storyboarded {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
         
+        
+    }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        mainCoordinator?.backToList()
+    }
+
+    deinit {
+        
         if playerViewController != nil {
-            
             AssetPlaybackManager.sharedManager.stopPlayer()
             AssetPlaybackManager.sharedManager.setAssetForPlayback(nil)
             
@@ -57,13 +65,6 @@ class VideoViewController: UIViewController, Storyboarded {
             playerViewController?.removeFromParent()
             playerViewController = nil
         }
-    }
-    
-    @IBAction func backButton(_ sender: UIButton) {
-        mainCoordinator?.backToList()
-    }
-
-    deinit {
         print("Deinitializes Video Controller")
     }
 }
