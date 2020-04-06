@@ -38,23 +38,14 @@ class VideoViewController: UIViewController, Storyboarded {
         
     }
     
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransition(to: size, with: coordinator)
-//        if UIDevice.current.orientation.isLandscape {
-//            print("Landscape")
-//            playerViewController?.goFullScreen()
-//        } else {
-//            print("Portrait")
-//            
-//        }
-//    }
+
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        navigationController?.setNavigationBarHidden(true, animated: false)
 //        let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20.0
 //        let navigationHeight = navigationController?.navigationBar.frame.height ?? 60.0
-//        playerViewController?.view.frame.origin.y = statusBarHeight + navigationHeight
+//        playerViewController?.view.frame.origin.y = self.topbarHeight
 //        navigationController?.navigationBar.backgroundColor = UIColor.black
 //        navigationController?.navigationBar.tintColor = UIColor.white
         
