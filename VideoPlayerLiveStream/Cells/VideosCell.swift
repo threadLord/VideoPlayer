@@ -16,8 +16,6 @@ class VideosCell: UITableViewCell {
     @IBOutlet weak var upperLabel: UILabel!
     @IBOutlet weak var lowerLabel: UILabel!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         leftImageView.contentMode = .scaleAspectFit
@@ -30,12 +28,6 @@ class VideosCell: UITableViewCell {
 
     }
     
-    func applyVideos(_ videos: VideoModel) {
-        upperLabel.text = videos.name
-        lowerLabel.text = durationApply(duration: videos.duration)
-        setImageWith(url: videos.thumbUrl)
-    }
-    
     func applyList(_ videos: Video) {
         upperLabel.text = videos.name
         lowerLabel.text = durationApply(duration: videos.duration)
@@ -44,10 +36,6 @@ class VideosCell: UITableViewCell {
     
     private func durationApply(duration: Double) -> String {
         return String(duration).replacingOccurrences(of: ".", with: ":")
-    }
-    
-    private func setImageWith(url: String) {
-        leftImageView.imageFromUrlAndContentMode(url, aspect: .scaleAspectFit)
     }
     
     private func styling() {
