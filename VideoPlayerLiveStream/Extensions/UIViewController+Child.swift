@@ -28,25 +28,5 @@ import AVKit
     }
 }
 
-extension AVPlayerViewController {
 
-    func goFullScreen() {
-        let selector = NSSelectorFromString("_transitionToFullScreenViewControllerAnimated:completionHandler:")
-        if self.responds(to: selector) {
-            // first argument is animated (true for me), second is completion handler (nil in my case)
-            self.perform(selector, with: true, with: nil)
-        }
-    }
-}
 
-extension UIViewController {
-
-    /**
-     *  Height of status bar + navigation bar (if navigation bar exist)
-     */
-
-    var topbarHeight: CGFloat {
-        return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
-            (self.navigationController?.navigationBar.frame.height ?? 0.0)
-    }
-}
