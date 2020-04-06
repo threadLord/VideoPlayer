@@ -17,6 +17,13 @@ class VideoViewController: UIViewController, Storyboarded {
     @IBOutlet weak var DesctiptionLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     
+    
+    @IBOutlet weak var navigationLabel: UILabel!
+    
+    
+    @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
+    
+    
     var mainCoordinator : MainCoordinator?
     var dataForVideo : Video?
     
@@ -27,7 +34,7 @@ class VideoViewController: UIViewController, Storyboarded {
         playerViewController = AVPlayerViewController()
         
         playerViewController?.view.frame = CGRect(x: self.view.frame.origin.x,
-                                             y: self.view.frame.origin.y,
+                                                  y: topViewHeightConstraint.constant,
                                              width: self.view.frame.width,
                                              height: self.view.frame.width * 9/16)
         guard let playerViewController = playerViewController else {return}
@@ -78,6 +85,7 @@ extension VideoViewController {
         TitleLabel.text = dataForVideo?.name
         DesctiptionLabel.text = description
         durationLabel.text = "Duration : \(durationString)"
+        navigationLabel.text = dataForVideo?.name
     }
         
     private func durationApply(duration: Double) -> String {
