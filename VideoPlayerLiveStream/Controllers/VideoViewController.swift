@@ -13,7 +13,6 @@ import AVKit
 class VideoViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var DesctiptionLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
@@ -38,19 +37,33 @@ class VideoViewController: UIViewController, Storyboarded {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupUI()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        AssetPlaybackManager.sharedManager.delegate = nil
-        playerViewController?.removeFromParent()
-        AssetPlaybackManager.sharedManager.stopPlayer()
-    }
-    
-    deinit {
+   override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       navigationController?.setNavigationBarHidden(true, animated: false)
+       setupUI()
+   }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
         
+        if playerViewController != nil {
+            
+            AssetPlaybackManager.sharedManager.stopPlayer()
+            AssetPlaybackManager.sharedManager.setAssetForPlayback(nil)
+            
+            playerViewController?.player = nil
+            AssetPlaybackManager.sharedManager.delegate = nil
+            playerViewController?.removeFromParent()
+            playerViewController = nil
+        }
+    }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        mainCoordinator?.backToList()
+    }
+
+    deinit {
         print("Deinitializes Video Controller")
     }
 }
